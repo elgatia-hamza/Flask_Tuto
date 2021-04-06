@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}
+    View All Users
+{% endblock %}
+
+{%  block content %}
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in values: %}
+                    <tr>
+                        <td>{{item.name}}</td>
+                        <td>{{item.email}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}
+
+
+
